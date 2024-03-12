@@ -39,7 +39,7 @@ const Home: NextPage = () => {
   const [text, setText] = useState<string>(defaultMyCompProps.title);
 
   const { free, waitUntilDone } = prefetch('/countdown.mp3', {
-    method: "blob-url",
+    method: "base64",
   });
 
   waitUntilDone().then(() => {
